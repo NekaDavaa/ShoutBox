@@ -20,10 +20,17 @@ $shouts = mysqli_query($con, $query);
    <div id="shouts">
       <ul>
         <?php while ($row = mysqli_fetch_assoc($shouts)) : ?>
-        <li class="shout"><span><span id="date-color"><?php echo $row['time']. ' -' ?> </span><span id="users-color"><?php echo $row['user']. ': ' ?></span><p><?php echo ucfirst($row['message']); ?></p></li>
+        <li class="shout"><span><span id="date-color"><?php echo $row['time']. ' -' ?> </span><span id="users-color"><?php echo $row['user']. ': ' ?></span><p><?php echo ucfirst($row['message']); ?></p>
+          <a href="process.php?action=delete&id=<?php echo $row['id']; ?>">Delete</a>
+        </li>
       <?php endwhile ?>
         </ul>
        </div>
+       <?php if (isset($_GET['error'])) : ?>
+        <div class="error-inputs">
+          <?php echo $_GET['error']; ?>
+        </div>
+      <?php endif ?>
   <div id="input">
     <form method="post" action="process.php">
      <input type="text" name="user" placeholder="Enter Your Name" />
