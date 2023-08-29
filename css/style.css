@@ -51,7 +51,7 @@ header h1 {
 	width:90%;
 	min-height: 80px;
 	margin:auto;
-	padding: 0;
+	padding: 0px 0px 20px 0px;
 }
 
 #input input[type='text'] {
