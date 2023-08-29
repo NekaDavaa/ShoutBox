@@ -82,8 +82,18 @@ header h1 {
 
 #users-color {
 	color:green;
+    font-weight: 700;
 }
 
 #date-color {
 	color:red;
+}
+
+#project-repo > a {
+	text-decoration: underline;
+	color:white;
+}
+
+.shout > span > p {
+	color:black;
 }
