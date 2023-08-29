@@ -79,3 +79,11 @@ header h1 {
 	width:98%;
 }
 }
+
+#users-color {
+	color:green;
+}
+
+#date-color {
+	color:red;
+}
